@@ -6,8 +6,10 @@ import { logger } from "./lib/logger.js";
 
 const app: Express = express();
 
+// In production, set FRONTEND_URL to your Vercel URL (e.g. https://your-app.vercel.app)
+// Local dev origins are always allowed so `npm run dev` keeps working unchanged.
 const allowedOrigins = [
-  process.env.FRONTEND_URL,
+  process.env.FRONTEND_URL?.replace(/\/+$/, ""),
   "http://localhost:3000",
 ].filter((origin): origin is string => Boolean(origin));
 
@@ -26,6 +28,8 @@ app.use(
 );
 app.use(
   cors({
+    // Falls back to allowing all origins only if FRONTEND_URL was never set,
+    // so a forgotten env var doesn't fail closed and take the API down.
     origin: allowedOrigins.length > 0 ? allowedOrigins : true,
     credentials: true,
   }),
