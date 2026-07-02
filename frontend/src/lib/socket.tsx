@@ -7,7 +7,8 @@ export function SocketProvider({ children }: { children: ReactNode }) {
   const [socket, setSocket] = useState<Socket | null>(null);
 
   useEffect(() => {
-    const s = io(window.location.origin, {
+    const socketUrl = import.meta.env.VITE_API_URL || window.location.origin;
+    const s = io(socketUrl, {
       path: "/api/socket.io",
       transports: ["polling", "websocket"],
     });
