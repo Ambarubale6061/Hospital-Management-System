@@ -4,8 +4,10 @@ import { logger } from "./logger.js";
 
 let io: Server | null = null;
 
+// Same origin logic as app.ts, kept in sync manually since Socket.IO
+// configures CORS separately from Express's cors() middleware.
 const allowedOrigins = [
-  process.env.FRONTEND_URL,
+  process.env.FRONTEND_URL?.replace(/\/+$/, ""),
   "http://localhost:3000",
 ].filter((origin): origin is string => Boolean(origin));
 
