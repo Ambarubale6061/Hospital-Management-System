@@ -79,7 +79,7 @@ export default function Register() {
             <div className="bg-white/10 p-2 rounded-xl backdrop-blur-md border border-white/20">
               <Stethoscope className="h-6 w-6 text-white" />
             </div>
-            <span className="font-extrabold text-xl tracking-tight text-white">HMS</span>
+            <span className="font-extrabold text-xl tracking-tight text-white">Medicore</span>
           </div>
           
           <div className="mt-12 space-y-2">
@@ -117,7 +117,7 @@ export default function Register() {
           {/* Mobile Logo */}
           <div className="flex lg:hidden items-center justify-center gap-2 mb-1 text-primary">
             <Stethoscope className="h-5 w-5" />
-            <span className="font-bold text-lg">HMS</span>
+            <span className="font-bold text-lg">Medicore</span>
           </div>
 
           <Card className="border-border/40 shadow-xl backdrop-blur-md bg-card">
