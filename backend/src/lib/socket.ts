@@ -4,9 +4,17 @@ import { logger } from "./logger.js";
 
 let io: Server | null = null;
 
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  "http://localhost:3000",
+].filter((origin): origin is string => Boolean(origin));
+
 export function initSocket(httpServer: HTTPServer): Server {
   io = new Server(httpServer, {
-    cors: { origin: "*", methods: ["GET", "POST", "PATCH", "DELETE"] },
+    cors: {
+      origin: allowedOrigins.length > 0 ? allowedOrigins : "*",
+      methods: ["GET", "POST", "PATCH", "DELETE"],
+    },
     path: "/api/socket.io",
     transports: ["polling", "websocket"],
   });
