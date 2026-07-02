@@ -12,6 +12,6 @@ if (Number.isNaN(port) || port <= 0) {
 const httpServer = createServer(app);
 initSocket(httpServer);
 
-httpServer.listen(port, () => {
+httpServer.listen(port, "0.0.0.0", () => {
   logger.info({ port }, "Server listening with Socket.IO");
 });
