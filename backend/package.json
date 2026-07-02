@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
- "scripts": {
+  "scripts": {
     "dev": "node --import dotenv/config --enable-source-maps ./dist/index.mjs",
     "build": "node ./build.mjs",
     "start": "node --import dotenv/config --enable-source-maps ./dist/index.mjs",
     "dev:build": "npm run build && npm run dev",
-    "seed": "node ./build-seed.mjs && node --import dotenv/config --enable-source-maps ./dist/seed.mjs" 
+    "seed": "node ./build-seed.mjs && node --import dotenv/config --enable-source-maps ./dist/seed.mjs"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
