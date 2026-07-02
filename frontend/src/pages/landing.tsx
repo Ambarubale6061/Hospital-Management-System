@@ -173,7 +173,7 @@ export default function Landing() {
               <Stethoscope className="h-5 w-5 text-primary-foreground" />
             </div>
             <div className="leading-none">
-              <span className="font-bold text-lg tracking-tight">MediCore</span>
+              <span className="font-bold text-lg tracking-tight">Medicore</span>
               <p className="text-[10px] text-muted-foreground mt-0.5">Hospital Management System</p>
             </div>
           </a>
@@ -315,7 +315,7 @@ export default function Landing() {
             variants={fadeUp}
             className="max-w-2xl mb-16"
           >
-            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">Why MediCore</p>
+            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">Why Medicore</p>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
               One system, built around the patient's timeline.
             </h2>
@@ -608,7 +608,7 @@ export default function Landing() {
               <div className="h-9 w-9 rounded-lg bg-primary flex items-center justify-center">
                 <Stethoscope className="h-5 w-5 text-primary-foreground" />
               </div>
-              <span className="font-bold text-lg">MediCore</span>
+              <span className="font-bold text-lg">Medicore</span>
             </div>
             <p className="text-sm text-background/70 leading-relaxed">
               A connected hospital management system for patients, doctors,
@@ -651,7 +651,7 @@ export default function Landing() {
 
         <div className="border-t border-background/10">
           <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-background/60">
-            <span>© {new Date().getFullYear()} MediCore Hospital Management System. All rights reserved.</span>
+            <span>© {new Date().getFullYear()} Medicore Hospital Management System. All rights reserved.</span>
             <span>Emergency hotline available 24/7</span>
           </div>
         </div>
