@@ -1,244 +1,431 @@
-येथे तुझा संपूर्ण प्रोजेक्टचा `README.md` कोड एकाच **सिंगल फाईल / कॅनव्हास (Code Block)** मध्ये दिला आहे. तू हा कोड जसाच्या तसा कॉपी करून तुझ्या प्रोजेक्टच्या `README.md` फाईलमध्ये टाकू शकतोस:
-
-````markdown
 <div align="center">
 
-# 🏥 MediCore HMS — Hospital Management System
+<img src="https://img.shields.io/badge/MediCore-HMS-0d9488?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyek0xNyAxM2gtNHY0aC0ydi00SDd2LTJoNFY3aDJ2NGg0djJ6Ii8+PC9zdmc+" alt="MediCore HMS" />
 
-### Full-stack, production-ready system built with React 19, Express 5, Drizzle ORM, Supabase PostgreSQL & MongoDB
+# MediCore HMS
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://hospital-management-system-seven-kappa.vercel.app/)
-[![Backend API](https://img.shields.io/badge/API-Render-46E3B7?style=for-the-badge&logo=render)](https://hospital-backend-p20c.onrender.com)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
-[![Express](https://img.shields.io/badge/Express-5.2-000000?style=for-the-badge&logo=express)](https://expressjs.com/)
-[![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?style=for-the-badge&logo=supabase)](https://supabase.com/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+### Full-Stack Hospital Management System
 
-_Designed & Built by **Ambar Ubale** — Software Engineer_
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit-0d9488?style=flat-square&logo=vercel)](https://hospital-management-system-seven-kappa.vercel.app/)
+[![API](https://img.shields.io/badge/Backend%20API-Live-46E3B7?style=flat-square&logo=render)](https://hospital-backend-p20c.onrender.com/api/healthz)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)](https://react.dev/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+
+**Built by [Ambar Ubale](https://github.com/ambarubale) — Software Engineer**
+
+[Live App](https://hospital-management-system-seven-kappa.vercel.app/) · [Backend API](https://hospital-backend-p20c.onrender.com) · [Report Bug](https://github.com/ambarubale/hospital-hub/issues)
 
 </div>
 
 ---
 
-## 📋 Overview
+## Overview
 
-**MediCore HMS** digitises every core hospital operation — from appointment scheduling and patient records to prescriptions, billing, queue management and analytics. It replaces fragmented workflows with a single, secure, role-based platform.
+MediCore HMS is a production-ready, role-based hospital management platform that digitalises patient care, scheduling, billing, and hospital administration in a single unified system.
 
-**Live URLs**
-
-- **Frontend:** [hospital-management-system-seven-kappa.vercel.app](https://hospital-management-system-seven-kappa.vercel.app/)
-- **Backend:** [hospital-backend-p20c.onrender.com](https://hospital-backend-p20c.onrender.com)
-
----
-
-## 📸 Screenshots
-
-| Dashboard                               | Appointments                                  | Doctor Profile                                    |
-| :-------------------------------------- | :-------------------------------------------- | :------------------------------------------------ |
-| ![Dashboard](screenshots/dashboard.png) | ![Appointments](screenshots/appointments.png) | ![Doctor Profile](screenshots/doctor-profile.png) |
-
-> 💡 _Tip: Add your own screenshots inside the `screenshots/` folder and update paths above._
-
----
-
-## 🔐 Demo Accounts
-
-All test accounts use the password: **`password123`**
-
-| Role                | Email                    | Access Level & Capabilities                                  |
-| :------------------ | :----------------------- | :----------------------------------------------------------- |
-| 👑 **Admin**        | `admin@hospital.com`     | Full system access, settings, logs & reports                 |
-| 🩺 **Doctor**       | `dr.carter@hospital.com` | Manage appointments, patient history & prescriptions         |
-| 🧑‍💼 **Receptionist** | `reception@hospital.com` | Live check-ins, token queue, billing & invoicing             |
-| 🛌 **Patient**      | `john.doe@email.com`     | View personal medical records, book appointments & pay bills |
-
----
-
-## ✨ Key Features
-
-- **📅 Smart Appointments:** End-to-end lifecycle tracking (`Pending` ➔ `Confirmed` ➔ `Checked In` ➔ `In Consultation` ➔ `Completed`) with real-time Socket.IO updates.
-- **👨‍⚕️ Unified Patient & Doctor Profiles:** Comprehensive medical histories, symptoms, treatment tracking, doctor availability scheduling, and insurance data management.
-- **💊 Automated Billing & Prescriptions:** Digital prescriptions directly linked to appointments; automatic, tax-compliant invoice generation with flexible status handlers.
-- **🔢 Real-time OPD Queue:** Token-based live queue management with instant push notifications backed by MongoDB and Socket.IO.
-- **📊 Executive Analytics Dashboard:** Interactive revenue and performance charts powered by `Recharts` for administrative insights.
-- **🛡️ Secure Access Control:** Role-Based Access Control (RBAC) paired with state-of-the-art JWT authentication (7-day lifecycle) and `bcryptjs` encryption.
-
----
-
-## 🏗 System Architecture
-
-The following diagram illustrates the modern dual-database multi-layered structure of MediCore HMS:
-
-```mermaid
-graph TD
-    %% Client Tier
-    subgraph Client_Tier [Frontend Browser - React 19 SPA]
-        A[UI Components / shadcn/ui] --> B[TanStack Query / State Cache]
-        B --> C[AuthContext & SocketContext]
-    end
-
-    %% Network / Protocol Tier
-    C -->|HTTP REST / Bearer JWT| D[Express 5 API Gateway]
-    C -->|WebSockets / WS| E[Socket.IO Server Link]
-
-    %% Application Tier
-    subgraph App_Tier [Backend Service - Node.js & Express 5]
-        D --> F[Security & RBAC Middleware]
-        E --> G[Real-Time Event Dispatcher]
-        F --> H[API Routers 15+ Core Modules]
-    end
-
-    %% Database Tier
-    subgraph DB_Tier [Data Infrastructure Layer]
-        H -->|Drizzle ORM| I[(Supabase PostgreSQL)]
-        G -->|Direct Connection| J[(MongoDB Hub)]
-        H -->|Document Storage| J
-    end
-
-    %% Style Classes
-    style Client_Tier fill:#f9f5ff,stroke:#7f56d9,stroke-width:2px
-    style App_Tier fill:#f0f9ff,stroke:#0284c7,stroke-width:2px
-    style DB_Tier fill:#f0fdf4,stroke:#16a34a,stroke-width:2px
 ```
-````
-
-### 🔁 Request & Data Lifecycle
-
-1. **Authentication State:** User logs in ➔ Server signs a 7-day JWT ➔ Saved securely in `localStorage`. Custom wrapper intercepts all headers.
-2. **Operations & Pipeline:** Form interactions validated by `Zod` & `react-hook-form` ➔ Transmitted through custom fetch hooks ➔ Handled by Express routes.
-3. **Reactive Interactivity:** On successful mutation ➔ Drizzle triggers database updates ➔ Socket.IO pushes a broadcast event ➔ Client-side TanStack cache auto-invalidates ➔ UI refreshes smoothly without full page reloads.
+Landing Page → Role-Based Login → Personalised Dashboard → Full HMS
+```
 
 ---
 
-## 📁 Project Folder Structure
+## Screenshots
 
-```text
-Hospital-Management-System/
-├── 📂 backend/
-│   ├── 📂 src/
-│   │   ├── 📜 app.ts              # Express initialization & Global Middleware Stack
-│   │   ├── 📜 index.ts            # Server entry point (HTTP + Socket.IO server engine)
-│   │   ├── 📜 db.ts               # Supabase PostgreSQL relational connector via Drizzle
-│   │   ├── 📜 seed.ts             # High-fidelity mock clinical data injector
-│   │   ├── 📂 routes/             # Isolated router nodes (15 functional endpoints)
-│   │   ├── 📂 middlewares/        # JWT Authentication, RBAC Guardrails & Rate-limiters
-│   │   ├── 📂 schema/             # Strictly typed relational database layout (9 core tables)
-│   │   └── 📂 lib/                # Shared utilities: Pino logger, Mongo client, Socket logic
-│   ├── 📜 drizzle.config.ts       # Database migrations & schemas sync setup
-│   └── 📜 package.json            # Server-side execution engines & engine scripts
+> **Note:** To add screenshots, place images in a `/screenshots` folder and update the paths below.
+
+<table>
+  <tr>
+    <td align="center"><strong>Landing Page</strong></td>
+    <td align="center"><strong>Dashboard</strong></td>
+    <td align="center"><strong>Appointments</strong></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/landing.png" alt="Landing Page" width="280" /></td>
+    <td><img src="screenshots/dashboard.png" alt="Dashboard" /></td>
+    <td><img src="screenshots/appointments.png" alt="Appointments" width="280" /></td>
+  </tr>
+</table>
+
+> Screenshot 3 — **Appointments page** showing the full appointment management interface with status tracking, patient/doctor details, date/time display, and action controls.
+
+---
+
+## Live Deployment
+
+| Layer        | Platform | URL                                                        |
+| ------------ | -------- | ---------------------------------------------------------- |
+| **Frontend** | Vercel   | https://hospital-management-system-seven-kappa.vercel.app/ |
+| **Backend**  | Render   | https://hospital-backend-p20c.onrender.com                 |
+| **Database** | Supabase | Managed PostgreSQL (cloud)                                 |
+
+> The Render free tier spins down after inactivity — first request may take ~30s.
+
+---
+
+## Demo Accounts
+
+All accounts use password: **`password123`**
+
+| Role             | Email                    | Access                                |
+| ---------------- | ------------------------ | ------------------------------------- |
+| **Admin**        | `admin@hospital.com`     | Full system — all modules             |
+| **Doctor**       | `dr.carter@hospital.com` | Appointments, patients, prescriptions |
+| **Receptionist** | `reception@hospital.com` | Appointments, queue, billing          |
+| **Patient**      | `john.doe@email.com`     | Own records, bookings, bills          |
+
+---
+
+## Features
+
+### By Module
+
+| Module                | Capability                                                             |
+| --------------------- | ---------------------------------------------------------------------- |
+| **Landing Page**      | Animated hero, services, doctors, testimonials, role-based demo access |
+| **Authentication**    | JWT login, bcrypt passwords, role-based routing, password reset        |
+| **Dashboard**         | Live stats, Recharts analytics, revenue graphs, activity feed          |
+| **Appointments**      | Book, confirm, check-in, complete, cancel, reschedule                  |
+| **Patients**          | Profiles, medical history, emergency contacts, insurance               |
+| **Doctors**           | Profiles, availability slots, stats (patients, revenue, rating)        |
+| **Prescriptions**     | Create/manage prescriptions linked to appointments                     |
+| **Billing**           | Auto-invoicing, tax/discount, payment status tracking                  |
+| **Queue**             | Token-based OPD queue with real-time status updates                    |
+| **Departments**       | CRUD departments with head doctor assignment                           |
+| **Reports**           | Revenue, appointments, patients, doctor performance                    |
+| **Audit Log**         | Full activity trail of all system events                               |
+| **Notifications**     | Real-time push via Socket.IO, per-user bell with unread count          |
+| **Hospital Settings** | Name, address, working hours, tax rate, currency                       |
+
+---
+
+## Tech Stack
+
+### Frontend
+
+|     | Technology            | Purpose                |
+| --- | --------------------- | ---------------------- |
+| ⚛️  | React 19 + TypeScript | UI framework           |
+| ⚡  | Vite 7                | Build tool             |
+| 🎨  | Tailwind CSS v4       | Styling                |
+| 🎞️  | Framer Motion         | Animations             |
+| 🔄  | TanStack Query v5     | Server state & caching |
+| 🧭  | wouter                | Client routing         |
+| 📋  | react-hook-form + zod | Forms & validation     |
+| 🔌  | socket.io-client      | Real-time events       |
+| 📊  | Recharts              | Charts & analytics     |
+| 🧩  | Radix UI + shadcn/ui  | Accessible components  |
+
+### Backend
+
+|     | Technology             | Purpose                        |
+| --- | ---------------------- | ------------------------------ |
+| 🟢  | Node.js 20 + Express 5 | API server                     |
+| 🗄️  | Drizzle ORM            | Type-safe SQL queries          |
+| 🐘  | Supabase PostgreSQL    | Primary database               |
+| 🍃  | MongoDB (optional)     | Notifications & file metadata  |
+| 🔌  | Socket.IO              | Real-time bidirectional events |
+| 🔐  | JWT + bcryptjs         | Authentication                 |
+| 📝  | Pino                   | Structured logging             |
+| 📦  | esbuild                | TypeScript bundler             |
+
+---
+
+## Architecture
+
+```
+Browser (React SPA)
+    │
+    ├── HTTP REST ──────────────► Express 5 API (/api/*)
+    │   Authorization: Bearer     │
+    │   <jwt_token>               ├── requireAuth (JWT verify)
+    │                             ├── requireRole (RBAC)
+    └── WebSocket ───────────────► Socket.IO (/api/socket.io)
+        (real-time events)        │
+                                  ├── Drizzle ORM ──► Supabase PostgreSQL
+                                  └── MongoDB driver ► MongoDB (optional)
+```
+
+**Request flow:**  
+`User action → zod validation → TanStack Query mutation → customFetch (adds Bearer token) → Express route → Drizzle query → response + Socket.IO broadcast → cache invalidated → UI updates`
+
+---
+
+## Project Structure
+
+```
+Hospital-Hub/
+├── backend/
+│   ├── src/
+│   │   ├── app.ts              # Express app + middleware stack
+│   │   ├── index.ts            # HTTP server + Socket.IO init
+│   │   ├── db.ts               # Supabase PostgreSQL connection
+│   │   ├── seed.ts             # Demo account seeder
+│   │   ├── schema/             # Drizzle table definitions (10 tables)
+│   │   │   ├── users.ts
+│   │   │   ├── doctors.ts      # doctors + availability_slots
+│   │   │   ├── patients.ts     # patients + medical_records
+│   │   │   ├── appointments.ts
+│   │   │   ├── prescriptions.ts
+│   │   │   ├── bills.ts        # bills + activity_log
+│   │   │   ├── departments.ts
+│   │   │   └── settings.ts
+│   │   ├── middlewares/
+│   │   │   └── auth.ts         # requireAuth, requireRole, signToken
+│   │   ├── lib/
+│   │   │   ├── logger.ts       # Pino logger
+│   │   │   ├── mongodb.ts      # Optional MongoDB connection
+│   │   │   └── socket.ts       # Socket.IO + emitEvent()
+│   │   └── routes/             # 15 route modules
+│   │       ├── auth.ts
+│   │       ├── users.ts
+│   │       ├── departments.ts
+│   │       ├── doctors.ts
+│   │       ├── patients.ts
+│   │       ├── appointments.ts
+│   │       ├── prescriptions.ts
+│   │       ├── bills.ts
+│   │       ├── dashboard.ts
+│   │       ├── queue.ts
+│   │       ├── reports.ts
+│   │       ├── notifications.ts
+│   │       ├── files.ts
+│   │       ├── settings.ts
+│   │       └── health.ts
+│   ├── drizzle.config.ts       # Drizzle Kit config (schema push/migrate)
+│   ├── build.mjs               # esbuild bundler script
+│   ├── build-seed.mjs          # esbuild bundler for seed
+│   └── package.json
 │
-└── 📂 frontend/
-    ├── 📂 public/                 # Static assets, branding vectors and manifest files
-    ├── 📂 src/
-    │   ├── 📜 main.tsx            # Application launchpad for React 19 ReactDOM
-    │   ├── 📜 App.tsx             # Root layout configuration & Wouter routing nodes
-    │   ├── 📜 index.css           # Tailwind CSS v4 design tokens and theme specs
-    │   ├── 📂 api/                # Global automated state queries & transactional mutation hooks
-    │   ├── 📂 components/         # High-performance components (shadcn/ui, Layouts, Charts)
-    │   ├── 📂 hooks/              # Custom utilities (device context, alerts, global view state)
-    │   ├── 📂 lib/                # React State Context blocks (Auth, Socket, Messaging)
-    │   └── 📂 pages/              # Interface view controllers (Metrics, Check-ins, EHR)
-    ├── 📜 vite.config.ts          # Core Vite bundler engine configs with local proxy logic
-    └── 📜 package.json            # Client-side builds, dependencies and automation scripts
-
+└── frontend/
+    ├── src/
+    │   ├── main.tsx            # React 19 createRoot entry
+    │   ├── App.tsx             # Router + all providers
+    │   ├── index.css           # Tailwind v4 + CSS design tokens
+    │   ├── api/
+    │   │   ├── custom-fetch.ts          # Fetch wrapper with auth injection
+    │   │   └── generated/
+    │   │       ├── api.schemas.ts       # All TypeScript interfaces
+    │   │       └── api.ts               # 51 React Query hooks
+    │   ├── lib/
+    │   │   ├── auth.tsx         # AuthContext (login, logout, user state)
+    │   │   ├── socket.tsx       # SocketContext + useSocketEvent()
+    │   │   ├── notifications.tsx # NotificationsContext
+    │   │   └── utils.ts         # cn() helper
+    │   ├── components/
+    │   │   ├── app-layout.tsx          # Sidebar + topbar layout shell
+    │   │   ├── notification-bell.tsx   # Bell + dropdown
+    │   │   ├── protected-route.tsx     # Auth guard
+    │   │   ├── toaster.tsx             # Toast renderer
+    │   │   └── ui/                     # shadcn/ui components (17 files)
+    │   ├── hooks/
+    │   │   ├── use-mobile.tsx   # Viewport breakpoint hook
+    │   │   └── use-toast.ts     # Global toast system
+    │   └── pages/
+    │       ├── landing.tsx      # Public landing page
+    │       ├── login.tsx        # Login + demo accounts
+    │       ├── register.tsx
+    │       ├── dashboard.tsx
+    │       ├── appointments/    # index, new, [id]
+    │       ├── patients/        # index, new, [id]
+    │       ├── doctors/         # index, new, [id]
+    │       ├── departments/     # index
+    │       ├── prescriptions/   # index, new, [id]
+    │       ├── bills/           # index, new, [id]
+    │       ├── queue.tsx
+    │       ├── schedule.tsx
+    │       ├── reports.tsx
+    │       ├── audit-log.tsx
+    │       ├── hospital-settings.tsx
+    │       ├── medical-records.tsx
+    │       ├── profile.tsx
+    │       └── settings.tsx
+    ├── vite.config.ts          # Vite + /api proxy to backend
+    └── package.json
 ```
 
 ---
 
-## 🛠 Tech Stack
+## Database Schema
 
-### Frontend Ecosystem
+```
+users
+ ├─── doctors ──── availability_slots
+ └─── patients ─── medical_records
+                         │
+appointments ────────────┤ (patientId + doctorId)
+ ├─── prescriptions      │
+ └─── bills              │
+                         │
+departments ─── doctors ─┘
+activity_log    (written by all route handlers)
+hospital_settings (singleton row)
+```
 
-- **Framework & Build Tool:** React 19, Vite
-- **Language & Type-Safety:** TypeScript (v5.9+)
-- **Styling & Design System:** Tailwind CSS v4, shadcn/ui
-- **Fluid Animations:** Framer Motion
-- **Server State & Caching:** TanStack Query
-- **Routing:** wouter (Lightweight client-side router)
-- **Form Management:** react-hook-form + Zod Validation
+**Key design decisions:**
 
-### Backend Ecosystem
-
-- **Server Runtime:** Node.js, Express 5 (Next-gen HTTP architecture)
-- **Data Access Layer:** Drizzle ORM (Type-safe SQL queries)
-- **Primary Relational Database:** Supabase PostgreSQL
-- **Real-time & NoSQL Layer:** MongoDB (Notifications & Event Logs) + Socket.IO
-- **Security Infrastructure:** JWT (JsonWebToken), bcryptjs password hashing
+- All timestamps use `timestamptz` (timezone-aware)
+- Appointment status uses a 9-value enum: `pending → confirmed → checked_in → waiting → in_consultation → completed` (+ `cancelled`, `no_show`, `rescheduled`)
+- Invoice numbers are auto-generated: `INV-{timestamp}-{random}`
+- Notifications and file metadata use MongoDB (optional — app works without it)
 
 ---
 
-## 💻 Local Development Setup
+## API Reference
 
-Follow these steps to set up the project locally:
+**Base URL:** `https://hospital-backend-p20c.onrender.com/api`  
+**Auth:** `Authorization: Bearer <token>` on all protected routes
 
-### 1. Repository Setup
+| Resource          | Endpoints                                                                                                                                      |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Health**        | `GET /healthz`                                                                                                                                 |
+| **Auth**          | `POST /auth/login` · `POST /auth/register` · `GET /auth/me` · `POST /auth/logout` · `POST /auth/forgot-password` · `POST /auth/reset-password` |
+| **Users**         | `GET/POST /users` · `GET/PATCH/DELETE /users/:id`                                                                                              |
+| **Departments**   | `GET/POST /departments` · `GET/PATCH/DELETE /departments/:id`                                                                                  |
+| **Doctors**       | `GET/POST /doctors` · `POST /doctors/register` · `GET/PATCH/DELETE /doctors/:id` · `/availability` · `/patients` · `/stats`                    |
+| **Patients**      | `GET /patients/me` · `GET/POST /patients` · `GET/PATCH/DELETE /patients/:id` · `/medical-history`                                              |
+| **Appointments**  | `GET/POST /appointments` · `GET/PATCH/DELETE /appointments/:id` · `/reschedule` · `/checkin` · `/queue-status` · `/consult`                    |
+| **Prescriptions** | `GET/POST /prescriptions` · `GET/PATCH /prescriptions/:id`                                                                                     |
+| **Bills**         | `GET/POST /bills` · `GET/PATCH /bills/:id`                                                                                                     |
+| **Dashboard**     | `GET /dashboard/stats` · `/appointment-analytics` · `/revenue-analytics` · `/recent-activity` · `/audit-log` · `/department-stats`             |
+| **Queue**         | `GET /queue`                                                                                                                                   |
+| **Reports**       | `GET /reports/revenue` · `/appointments` · `/patients` · `/doctors`                                                                            |
+| **Notifications** | `GET/DELETE /notifications` · `/unread-count` · `/read` · `/read-all`                                                                          |
+| **Settings**      | `GET/PATCH /hospital-settings`                                                                                                                 |
 
-```bash
-git clone <repo-url> Hospital-Hub
-cd Hospital-Hub
+---
 
-```
+## Authentication & Roles
 
-### 2. Install Dependencies
+**Flow:** `Login → bcrypt verify → JWT signed (7d) → stored in localStorage → attached to every request as Bearer token`
 
-```bash
-# Install backend packages
-cd backend && npm install
+| Permission            | Admin | Doctor       | Receptionist | Patient |
+| --------------------- | ----- | ------------ | ------------ | ------- |
+| All patients          | ✅    | Own patients | ✅           | ❌      |
+| All appointments      | ✅    | Own          | ✅           | Own     |
+| Prescriptions (write) | ✅    | ✅           | ❌           | ❌      |
+| Billing (write)       | ✅    | ❌           | ✅           | ❌      |
+| Queue management      | ✅    | ✅           | ✅           | ❌      |
+| Reports               | ✅    | ❌           | ❌           | ❌      |
+| Hospital settings     | ✅    | ❌           | ❌           | ❌      |
+| User management       | ✅    | ❌           | ❌           | ❌      |
 
-# Install frontend packages
-cd ../frontend && npm install
+---
 
-```
+## Environment Variables
 
-### 3. Environment Configuration
-
-Create a `.env` file in the `backend/` directory based on the `.env.example` file:
+### Backend — `backend/.env`
 
 ```env
-SUPABASE_DATABASE_URL=your_supabase_postgres_connection_string
-SESSION_SECRET=your_jwt_secret_key_here
-MONGODB_URI=your_optional_mongodb_connection_string
+# Required
+SUPABASE_DATABASE_URL=postgresql://postgres.[ref]:[password]@[host]:6543/postgres
+SESSION_SECRET=your-long-random-secret-here
 
+# Optional
+PORT=5000
+NODE_ENV=development
+MONGODB_URI=mongodb+srv://user:pass@cluster.mongodb.net/hms
 ```
 
-### 4. Database Initialization
+**Getting `SUPABASE_DATABASE_URL`:**  
+Supabase Dashboard → Project Settings → Database → Connection string → URI  
+Use **Transaction pooler (port 6543)** for production, **Direct (port 5432)** for local dev.
 
-Synchronize your schema with Supabase and seed the demo dataset:
+### Frontend
+
+No `.env` required. Vite proxies `/api` → `http://localhost:5000` in development.  
+In production (Vercel), use `vercel.json` rewrites to proxy `/api/*` to your Render URL.
+
+---
+
+## Local Setup
 
 ```bash
-cd ../backend
-npx drizzle-kit push
-npm run seed
+# 1. Install backend dependencies and push schema
+cd backend
+npm install
+cp .env.example .env        # Fill SUPABASE_DATABASE_URL + SESSION_SECRET
 
+npx drizzle-kit push        # Creates all tables in Supabase
+npm run seed                # Creates 4 demo accounts with password123
+npm run dev:build           # Build + start on :5000
+
+# 2. In a new terminal — install and start frontend
+cd frontend
+npm install
+npm run dev                 # Starts on :3000
 ```
 
-### 5. Launch the Applications
-
-Run both servers concurrently during development:
-
-- **Backend Server:** `cd backend && npm run dev:build` (Runs on Port `5000`)
-- **Frontend Client:** `cd frontend && npm run dev` (Runs on Port `3000`)
-
-Now, open your browser and navigate to: **`http://localhost:3000`**
+Open **http://localhost:3000**
 
 ---
 
-## 🚀 Cloud Deployment
+## Deployment
 
-- **Frontend (Vercel):** Set root directory to `frontend`, configured build command to `npm run build`, and output folder to `dist`. Includes a `vercel.json` file for rewriting rules to route `/api/*` traffic cleanly to Render.
-- **Backend (Render):** Set root directory to `backend`, build script to `npm install && npm run build`, and startup script to `npm run start`.
-- **Database Layers:** Hosted in the cloud natively via Supabase & MongoDB Atlas clusters.
+### Vercel (Frontend)
+
+1. Connect GitHub repo to Vercel
+2. Set **Root Directory:** `frontend` · **Build:** `npm run build` · **Output:** `dist`
+3. Add `frontend/vercel.json`:
+
+```json
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://hospital-backend-p20c.onrender.com/api/$1"
+    },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
+```
+
+### Render (Backend)
+
+1. Connect GitHub repo → New Web Service
+2. **Root Directory:** `backend` · **Build:** `npm install && npm run build` · **Start:** `npm run start`
+3. Set environment variables: `SUPABASE_DATABASE_URL`, `SESSION_SECRET`, `NODE_ENV=production`
+4. After deploy, open the Render shell and run: `node dist/seed.mjs`
 
 ---
 
-## 🔮 Future Roadmap
+## Troubleshooting
 
-- [ ] Full EHR integration using structured **SOAP notes** guidelines.
-- [ ] Comprehensive laboratory tracking, specimen status workflows, and imaging report uploads.
-- [ ] Integrated Telemedicine portal with WebRTC video calling.
-- [ ] Enterprise-grade CI/CD automation pipelines via GitHub Actions and Docker deployment strategies.
+| Problem                             | Fix                                                                        |
+| ----------------------------------- | -------------------------------------------------------------------------- |
+| `SUPABASE_DATABASE_URL must be set` | Create `backend/.env` from `.env.example`                                  |
+| `[YOUR-PASSWORD]` error             | Replace the placeholder in the connection string with your actual password |
+| `relation "users" does not exist`   | Run `npx drizzle-kit push`                                                 |
+| Demo accounts not working           | Run `npm run seed` from `backend/`                                         |
+| Blank screen after login            | Ensure backend is running on port 5000                                     |
+| First request on Render is slow     | Free tier spin-down — expected; upgrade to Starter plan for always-on      |
+| Socket.IO not connecting in prod    | Verify Vercel rewrites include `/api/socket.io` pass-through               |
 
 ---
 
-Made with ❤️ by **Ambar Ubale**
+## Roadmap
+
+- [ ] Video telemedicine (WebRTC)
+- [ ] SMS/WhatsApp appointment reminders
+- [ ] Online payments (Razorpay / Stripe)
+- [ ] Lab & radiology order management
+- [ ] Bed and OT management
+- [ ] Mobile app (React Native)
+- [ ] Docker Compose setup
+- [ ] CI/CD pipeline (GitHub Actions)
+- [ ] AI-assisted diagnostic suggestions
+
+---
+
+<div align="center">
+
+## Designed & Built by
+
+<img src="https://img.shields.io/badge/Ambar%20Ubale-Software%20Engineer-0d9488?style=for-the-badge" alt="Ambar Ubale" />
+
+_MediCore HMS — Modern Hospital Management for the Digital Age_
+
+[![Frontend](https://img.shields.io/badge/Frontend-Live-black?style=flat-square&logo=vercel)](https://hospital-management-system-seven-kappa.vercel.app/)
+[![Backend](https://img.shields.io/badge/Backend-Live-46E3B7?style=flat-square&logo=render)](https://hospital-backend-p20c.onrender.com)
+
+</div>
